@@ -22,7 +22,7 @@ const MULTER = {
     })
 }
 
-export { 
+export default{ 
     TMP_FOLDER, 
     UPLOAS_FOLDER, 
     MAX_FILE_SIZE, 
