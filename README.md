@@ -32,10 +32,10 @@
 - Criação de solicitações de reembolso.
 - Listagem de reembolsos com filtros opcionais.
 
-- ### 📂 Upload de Arquivos
-Suporte para upload de arquivos (imagens e PDFs).
-Configuração de tamanho máximo de 3MB.
-Tipos de arquivos aceitos: image/jpeg, image/png, image/jpg, application/pdf.
+### 📂 Upload de Arquivos
+- Suporte para upload de arquivos (imagens e PDFs).
+- Configuração de tamanho máximo de 3MB.
+- Tipos de arquivos aceitos: image/jpeg, image/png, image/jpg, application/pdf.
 
 ---
 
