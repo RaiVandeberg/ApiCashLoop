@@ -32,6 +32,11 @@
 - Criação de solicitações de reembolso.
 - Listagem de reembolsos com filtros opcionais.
 
+- ### 📂 Upload de Arquivos
+Suporte para upload de arquivos (imagens e PDFs).
+Configuração de tamanho máximo de 3MB.
+Tipos de arquivos aceitos: image/jpeg, image/png, image/jpg, application/pdf.
+
 ---
 
 ## 📂 Estrutura do Projeto
@@ -39,8 +44,9 @@
 ```
 📦 ApiCashLoop
  ┣ 📂 src
- ┃ ┣ 📂 config
- ┃ ┃ ┗ 📜 auth.ts              # Configuração de autenticação JWT
+ ┃ ┣ 📂 configs
+ ┃ ┃ ┣ 📜 auth.ts              # Configuração de autenticação JWT
+ ┃ ┃ ┗ 📜 upload.ts            # Configuração de upload de arquivos
  ┃ ┣ 📂 controllers
  ┃ ┃ ┣ 📜 refunds-controller.ts # Lógica para solicitações de reembolso
  ┃ ┃ ┣ 📜 sessions-controller.ts # Controle de autenticação de usuários
@@ -55,8 +61,8 @@
  ┃ ┃ ┣ 📜 sessions-routes.ts     # Rotas de autenticação
  ┃ ┃ ┗ 📜 users-routes.ts        # Rotas de usuários
  ┃ ┣ 📂 database
- ┃ ┃ ┣ 📜 schema.prisma         # Schema do banco de dados
- ┃ ┃ ┗ 📂 migrations           # Migrações do banco de dados
+ ┃ ┃ ┣ 📜 prisma.ts             # Configuração do Prisma
+ ┃ ┃ ┗ 📜 schema.prisma         # Schema do banco de dados
  ┃ ┣ 📂 utils
  ┃ ┃ ┗ 📜 AppError.ts           # Classe personalizada para erros
  ┗ 📜 server.ts                 # Inicialização do servidor Express
