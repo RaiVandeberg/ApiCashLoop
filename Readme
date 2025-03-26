@@ -1,0 +1,105 @@
+# 📄 ApiCashLoop - Gerenciamento de Reembolsos
+
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+
+ApiCashLoop é uma solução robusta e segura para gerenciamento de solicitações de reembolso, desenvolvida com tecnologias modernas para garantir desempenho e escalabilidade.
+
+## ✨ Funcionalidades Principais
+
+- **Autenticação Segura** com JWT
+- **Controle de Acesso** baseado em roles
+- **CRUD Completo** para solicitações de reembolso
+- **Validação de Dados** com Zod
+- **Filtros Inteligentes** para consultas
+- **Tipagem Estática** com TypeScript
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| **Node.js** | Ambiente de execução JavaScript server-side |
+| **Express** | Framework web rápido e minimalista |
+| **TypeScript** | JavaScript com sintaxe para tipos |
+| **Prisma** | ORM moderno para banco de dados |
+| **Zod** | Validação de esquemas TypeScript-first |
+| **JWT** | Autenticação stateless segura |
+
+## 🏗️ Estrutura do Projeto
+
+apicashloop/
+├── src/
+│ ├── config/ # Configurações da aplicação
+│ ├── controllers/ # Lógica dos endpoints
+│ ├── middlewares/ # Interceptores de requisição
+│ ├── routes/ # Definição de rotas
+│ ├── utils/ # Utilitários e helpers
+│ └── database/ # Configuração do Prisma
+├── .env # Variáveis de ambiente
+└── package.json # Dependências e scripts
+
+
+## 🔐 Autenticação
+
+A API utiliza JWT (JSON Web Tokens) para autenticação. Todos os endpoints protegidos requerem o header:
+
+```http
+Authorization: Bearer <token>
+
+📝 Exemplo de Uso
+Criando um Reembolso
+Requisição:
+
+POST /refunds
+Content-Type: application/json
+Authorization: Bearer <your_token>
+
+{
+  "name": "Viagem à conferência",
+  "category": "accommodation",
+  "amount": 1200.50,
+  "filename": "hotel_invoice_12345.pdf"
+}
+
+Resposta:
+{
+  "id": "clxyz123abc456",
+  "name": "Viagem à conferência",
+  "category": "accommodation",
+  "amount": 1200.5,
+  "filename": "hotel_invoice_12345.pdf",
+  "userId": "user123",
+  "createdAt": "2023-10-15T14:30:00.000Z"
+}
+
+Listando Reembolsos
+Requisição:
+
+GET /refunds?name=conferência
+Authorization: Bearer <your_token>
+
+Resposta:
+
+[
+  {
+    "id": "clxyz123abc456",
+    "name": "Viagem à conferência",
+    "category": "accommodation",
+    "amount": 1200.5,
+    "filename": "hotel_invoice_12345.pdf",
+    "createdAt": "2023-10-15T14:30:00.000Z",
+    "user": {
+      "id": "user123",
+      "name": "João Silva",
+      "email": "joao@empresa.com"
+    }
+  }
+]
+
+🚀 Como Executar
+Clone o repositório:
+
+git clone https://github.com/seu-usuario/apicashloop.git
+cd apicashloop
