@@ -11,6 +11,13 @@
 - **Zod**: Biblioteca para validação de schemas e dados.
 - **JWT**: Implementação segura de autenticação e autorização.
 
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+
+---
+
 ## ⚙️ Funcionalidades
 
 ### 🔒 Autenticação e Autorização
